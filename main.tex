@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amssymb}
+\usepackage{amsmath,wasysym}
+
+\title{Semaine 3}
+\author{Joshua Freeman}
+\date{Mars 2021}
+
+\begin{document}
+
+\maketitle
+\setcounter{section}{6}
+\section{Démonstrations par l'absurde}
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item Pour commencer, soit $\alpha$ est irrationnel et $b=\frac{p}{q}, p,q \in \mathbb{Z}, \gcd (p,q) = 1$ rationnel.  Supposons que $\alpha b=\frac{c}{d}, c,d \in \mathbb{Z}, \gcd (c,d) = 1.$ Alors $\alpha = \frac{qc}{pd},$ ce qui contredit le fait que $\alpha$ soit irrationnel. On a donc que quand on multiplie un nombre irrationnel par un nombre rationnel, on obtient un nombre irrationnel.
+        \item Remarquons d'abord que $2$ est rationnel, comme nombre entier. Ensuite, supposons que $\sqrt{2}$ est rationnel, que $\sqrt{2}= \frac{p}{q}, p,q \in \mathbb{Z}, \gcd (p,q) = 1.$ Ceci implique que $2q^2=p^2.$ Or, comme on le voit dans le tableau ci-dessous, ceci implique que $p$ est pair.
+\begin{center}
+\begin{tabular}{c|c}
+$p \mod 2$&$p^2 \mod 2$\\
+\hline
+$0$&$0$\\
+$1$&$1$\\
+
+\end{tabular}
+\end{center}
+On peut donc écrire $p=2k, k \in \mathbb{Z}.$ On a donc $2k^2=q^2,$ et donc, de la même manière, $q$ est pair. On a donc une contradiction : $2>1$ est un diviseur commun à $p,q$ et pourtant nous avions présupposé que $\gcd (p,q) = 1.$ C'est absurde. $\sqrt{2}$ est irrationnel. Enfin, comme $2\sqrt{2}$ est irrationnel comme produit d'un nombre irrationnel par un nombre rationnel.
+    \end{enumerate}
+    \item Supposons que $\sqrt{41}+3\sqrt{2}=\frac{p}{q}, p,q \in \mathbb{Z}, \gcd (p,q) = 1. \implies \sqrt{41} = \frac{p}{q} - 3\sqrt{2}\implies 41 = \frac{p^2}{q^2}- 6 \sqrt{2}\frac{p}{q}+18.$ Ceci implique que $ \underbrace{18 -41 + \frac{p^2}{q^2}}_\textbf{rationnel} = \underbrace{6\sqrt{2}\frac{p}{q}}_\textbf{irrationnel}.$ Ceci est absurde... \textit{Conclusion.} On a bien $\sqrt{41}+\sqrt{18} \in \mathbb{Q}\setminus \mathbb{Z}$
+    \item Entrons tout de suite dans le vif du sujet. Notons que $\forall \epsilon >0, \exists m_0, \forall n \geq m_0, |x_n-x|< \epsilon$. Soit $n\geq \max (n_0, m_0),$ où $m_0$ est le $m_0$ donné pour $\epsilon = x-b>0.$ Alors on a bien $|x_n-x|\leq x-b \implies \underbrace{b \leq x_n}_{\text{\lightning}}.$ Ceci est absurde. De la même manière, soit $n\geq \max (n_0, m_0),$ où $m_0$ est le $m_0$ donné pour $\epsilon = a-x>0.$ Alors on a $|x_n-x|\leq a-x \implies \underbrace{x_n \leq a}_{\text{\lightning}}.$
+    \textit{Conclusion.} On a bien $a\leq x \leq b.$
+\end{enumerate}
+
+\end{document}
